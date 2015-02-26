@@ -38,7 +38,7 @@ end
 
 action :apply do
   if not new_resource.block_device.empty? and not new_resource.scheduler.empty?
-    update_value(File.basename(new_resource.block_device), new_resource.scheduler)
+    update_value(::File.basename(new_resource.block_device), new_resource.scheduler)
   end
 end
 
