@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.hostname = 'linux-berkshelf'
+  config.vm.hostname = 'chef-linux-berkshelf'
 
   # Set the version of chef to install using the vagrant-omnibus plugin
   # NOTE: You will need to install the vagrant-omnibus plugin:
@@ -84,7 +84,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
 
     chef.run_list = [
-      'recipe[linux::default]'
+      'recipe[chef-linux::default]'
     ]
   end
 end
