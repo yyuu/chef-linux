@@ -1,0 +1,7 @@
+name             'linux'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures linux'
+long_description 'Installs/Configures linux'
+version          '0.1.0'
