@@ -74,17 +74,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # to skip installing and copying to Vagrant's shelf.
   # config.berkshelf.except = []
 
-  config.vm.provision :chef_solo do |chef|
+  config.vm.provision :chef_zero do |chef|
+    chef.data_bags_path = 'test/data_bags'
     chef.json = {
-      mysql: {
-        server_root_password: 'rootpass',
-        server_debian_password: 'debpass',
-        server_repl_password: 'replpass'
-      }
     }
-
     chef.run_list = [
-      'recipe[chef-linux::default]'
+      'recipe[smoke]'
     ]
   end
 end

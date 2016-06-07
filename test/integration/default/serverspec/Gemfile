@@ -1,0 +1,4 @@
+source "https://rubygems.org/"
+gem "serverspec", "~> 2.24.1"
+gem "net-ssh", "~> 2.9.2"
+gem "yarjuf", "~> 2.0.0"
