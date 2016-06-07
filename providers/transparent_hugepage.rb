@@ -2,6 +2,8 @@ def whyrun_supported?
   true
 end
 
+include Linux::Helper
+
 action :apply do
   if not new_resource.enabled.empty?
     set_sysfs_choice("#{sys_kernel_mm_transparent_hugepage}/enabled", new_resource.enabled)
